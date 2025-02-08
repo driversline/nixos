@@ -18,3 +18,8 @@ sudo mount /dev/disk/by-label/NIXROOT /mnt
 sudo mkdir -p /mnt/boot
 sudo mount /dev/disk/by-label/NIXBOOT /mnt/boot
 ```
+
+## Help command
+```bash
+lsblk
+```
