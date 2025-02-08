@@ -44,6 +44,11 @@ nixos-generate-config --root /mnt
 nixos-install
 ```
 
+## Recommendation with first build
+```bash
+nixos-rebuild --upgrade switch
+```
+
 ## Help command
 ```bash
 sudo su
