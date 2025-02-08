@@ -41,5 +41,8 @@ nixos-install
 
 ## Help command
 ```bash
+sudo su
+```
+```bash
 lsblk
 ```
