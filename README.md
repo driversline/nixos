@@ -54,3 +54,6 @@ lsblk
 ```bash
 passwd user
 ```
+```bash
+umount
+```
