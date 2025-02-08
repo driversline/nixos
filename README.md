@@ -29,6 +29,16 @@ sudo mkswap /mnt/.swapfile
 sudo swapon /mnt/.swapfile
 ```
 
+## Config
+```bash
+nixos-generate-config --root /mnt
+```
+
+## Nix
+``bash
+nixos-install
+```
+
 ## Help command
 ```bash
 lsblk
