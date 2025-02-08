@@ -4,11 +4,11 @@
 ```bash
 cfdisk
 ```
-* `128MB / 256MB for boot Type - EFI System`
+> `128MB / 256MB for boot Type - EFI System`
 
-* `The remainder for the file system Type - Linux filesystem`
+> `The remainder for the file system Type - Linux filesystem`
 
-* `Swap is optional Type - Linux swap`
+> `Swap is optional Type - Linux swap`
 
 ### You can change NIXROOT and NIXBOOT value
 
