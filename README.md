@@ -46,3 +46,6 @@ sudo su
 ```bash
 lsblk
 ```
+```bash
+passwd user
+```
