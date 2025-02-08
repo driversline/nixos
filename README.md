@@ -13,6 +13,7 @@ sudo mkfs.ext4 /dev/sda2 -L NIXROOT
 ```
 
 ## Mount
+### You can change NIXROOT and NIXBOOT value
 ```bash
 sudo mount /dev/disk/by-label/NIXROOT /mnt
 sudo mkdir -p /mnt/boot
