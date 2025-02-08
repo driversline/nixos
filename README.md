@@ -35,7 +35,7 @@ nixos-generate-config --root /mnt
 ```
 
 ## Nix
-``bash
+```bash
 nixos-install
 ```
 
