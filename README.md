@@ -19,6 +19,14 @@ sudo mkdir -p /mnt/boot
 sudo mount /dev/disk/by-label/NIXBOOT /mnt/boot
 ```
 
+## Swap guide (from here)[https://nixos.wiki/wiki/NixOS_Installation_Guide]
+```bash
+sudo dd if=/dev/zero of=/mnt/.swapfile bs=1024 count=2097152 # 2GB size
+sudo chmod 600 /mnt/.swapfile
+sudo mkswap /mnt/.swapfile
+sudo swapon /mnt/.swapfile
+```
+
 ## Help command
 ```bash
 lsblk
