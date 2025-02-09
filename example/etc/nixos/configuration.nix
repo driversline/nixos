@@ -6,6 +6,7 @@
       ./hardware-configuration.nix
       ./network.nix
       ./nvidia.nix
+      ./locale.nix
     ];
 
 # - - - - - - Boot - - - - - - #
