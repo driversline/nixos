@@ -7,7 +7,10 @@
 * [bspwmrc](https://github.com/driversline/bspwm/blob/main/dotfiles/bspwmrc)
 * [sxhkdrc](https://github.com/driversline/bspwm/blob/main/dotfiles/sxhkdrc)
 
-> Don't forget to run `chmod +x ~/.config/bspwm/bspwmrc`
+### Don't forget to run
+```bash
+chmod +x ~/.config/bspwm/bspwmrc
+```
 
 ## Copy files
 ```bash
@@ -20,4 +23,6 @@ curl -O https://raw.githubusercontent.com/driversline/other/main/.gtkrc-2.0 \
      -O https://raw.githubusercontent.com/driversline/bspwm/main/dotfiles/bspwmrc
 ```
 ## Description
+```bash
 This configuration is intended for use with NVIDIA graphics (without integrated Intel graphics). Systemd-boot logs are completely hidden. Available locales are Russian/English. Swap is disabled. It uses the Zen kernel with minimal auditing. The default user is set to "user".
+```
