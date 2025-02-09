@@ -5,9 +5,12 @@
 ```bash
 chmod +x ~/.config/bspwm/bspwmrc
 ```
+
+## Copy
+
 <details>
-     
-<summary>Copy files</summary>
+
+<summary>Show command</summary>
 
 ```bash
 curl -O https://raw.githubusercontent.com/driversline/other/main/.gtkrc-2.0 \
