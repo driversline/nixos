@@ -159,7 +159,7 @@
      flameshot
      xorg.xrandr
      xorg.xsetroot
-     pkgs.docker
+ #   pkgs.docker
      pkgs.lsof
      pkgs.fish
      pkgs.cava
@@ -170,7 +170,7 @@
      pkgs.fzf
      pkgs.nodejs_23
      pkgs.gcc
-     pkgs.libreoffice
+ #   pkgs.libreoffice
      pkgs.dig
      pkgs.curl
    ];
