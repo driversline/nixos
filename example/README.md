@@ -19,3 +19,5 @@ curl -O https://raw.githubusercontent.com/driversline/other/main/.gtkrc-2.0 \
      -O https://raw.githubusercontent.com/driversline/bspwm/main/dotfiles/sxhkdrc \
      -O https://raw.githubusercontent.com/driversline/bspwm/main/dotfiles/bspwmrc
 ```
+## Description
+This configuration is intended for use with NVIDIA graphics (without Intel graphics). Systemd-boot logs are completely hidden. Available locales are Russian/English. Swap is disabled. It uses the Zen kernel without auditing. The default user is set to "user".
