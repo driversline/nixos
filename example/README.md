@@ -1,9 +1,9 @@
 ## Program links
-* [Nvim](https://github.com/driversline/bspwm/blob/main/dotfiles/nvim/init.lua)
-* [Alacritty](https://github.com/driversline/bspwm/blob/main/dotfiles/alacritty.toml)
-* [Fish](https://github.com/driversline/bspwm/blob/main/dotfiles/fish/config.fish)
-* [Gtk3](https://github.com/driversline/other/blob/main/gtk-3.0/settings.ini)
-* [Gtk2](https://github.com/driversline/other/blob/main/.gtkrc-2.0)
+* [nvim](https://github.com/driversline/bspwm/blob/main/dotfiles/nvim/init.lua)
+* [alacritty](https://github.com/driversline/bspwm/blob/main/dotfiles/alacritty.toml)
+* [aish](https://github.com/driversline/bspwm/blob/main/dotfiles/fish/config.fish)
+* [gtk3](https://github.com/driversline/other/blob/main/gtk-3.0/settings.ini)
+* [gtk2](https://github.com/driversline/other/blob/main/.gtkrc-2.0)
 * [bspwmrc](https://github.com/driversline/bspwm/blob/main/dotfiles/bspwmrc)
 * [sxhkdrc](https://github.com/driversline/bspwm/blob/main/dotfiles/sxhkdrc)
 
