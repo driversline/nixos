@@ -145,7 +145,7 @@
 
 # - - - - - - Users - - - - - - #
 
-   users.users.driversline = {
+   users.users.user = {
      isNormalUser = true;
      home = "/home/user";
      extraGroups = [ "wheel" ];
