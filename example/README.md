@@ -1,5 +1,14 @@
-# Programs
-### From [Nvim](https://github.com/driversline/bspwm/blob/main/dotfiles/nvim/init.lua), [Alacritty](https://github.com/driversline/bspwm/blob/main/dotfiles/alacritty.toml), [Fish](https://github.com/driversline/bspwm/blob/main/dotfiles/fish/config.fish), [Gtk3](https://github.com/driversline/other/blob/main/gtk-3.0/settings.ini), [Gtk2](https://github.com/driversline/other/blob/main/.gtkrc-2.0), [bspwmrc](https://github.com/driversline/bspwm/blob/main/dotfiles/bspwmrc), [sxhkdrc](https://github.com/driversline/bspwm/blob/main/dotfiles/sxhkdrc)
+# Program links
+### Source from
+[Nvim](https://github.com/driversline/bspwm/blob/main/dotfiles/nvim/init.lua),
+[Alacritty](https://github.com/driversline/bspwm/blob/main/dotfiles/alacritty.toml),
+[Fish](https://github.com/driversline/bspwm/blob/main/dotfiles/fish/config.fish),
+[Gtk3](https://github.com/driversline/other/blob/main/gtk-3.0/settings.ini),
+[Gtk2](https://github.com/driversline/other/blob/main/.gtkrc-2.0), 
+[bspwmrc](https://github.com/driversline/bspwm/blob/main/dotfiles/bspwmrc),
+[sxhkdrc](https://github.com/driversline/bspwm/blob/main/dotfiles/sxhkdrc)
+
+> Don't forget to run `chmod +x ~/.config/bspwm/bspwmrc`
 
 ## Copy files
 ```bash
@@ -11,5 +20,3 @@ curl -O https://raw.githubusercontent.com/driversline/other/main/.gtkrc-2.0 \
      -O https://raw.githubusercontent.com/driversline/bspwm/main/dotfiles/sxhkdrc \
      -O https://raw.githubusercontent.com/driversline/bspwm/main/dotfiles/bspwmrc
 ```
-
-### Don't forget to run `chmod +x ~/.config/bspwm/bspwmrc`
