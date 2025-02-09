@@ -10,8 +10,6 @@ cfdisk
 
 > Swap is optional Type - Linux swap
 
-### You can change NIXROOT and NIXBOOT value
-
 ## File system - Step 2
 ```bash
 sudo mkfs.fat -F 32 /dev/sda1
