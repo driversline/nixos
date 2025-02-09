@@ -1,5 +1,4 @@
-# Program links
-### Source from
+## Program links
 * [Nvim](https://github.com/driversline/bspwm/blob/main/dotfiles/nvim/init.lua),
 * [Alacritty](https://github.com/driversline/bspwm/blob/main/dotfiles/alacritty.toml),
 * [Fish](https://github.com/driversline/bspwm/blob/main/dotfiles/fish/config.fish),
