@@ -7,9 +7,8 @@ chmod +x ~/.config/bspwm/bspwmrc
 ```
 <details>
      
-## Copy files
+<summary>## Copy files</summary>
 
-<summary>
 ```bash
 curl -O https://raw.githubusercontent.com/driversline/other/main/.gtkrc-2.0 \
      -O https://raw.githubusercontent.com/driversline/other/main/gtk-3.0/settings.ini \
@@ -19,8 +18,7 @@ curl -O https://raw.githubusercontent.com/driversline/other/main/.gtkrc-2.0 \
      -O https://raw.githubusercontent.com/driversline/bspwm/main/dotfiles/sxhkdrc \
      -O https://raw.githubusercontent.com/driversline/bspwm/main/dotfiles/bspwmrc
 ```
-</summary>
-     
+    
 </details>
 
 ## Description
