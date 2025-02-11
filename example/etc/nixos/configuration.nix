@@ -136,9 +136,9 @@
     Defaults !authenticate
   '';
 
-# - - - - - - GTK - - - - - - #
+# - - - - - - Theme - - - - - - #
 
-  qt.enable = false;
+  qt.enable = true;
 
 # - - - - - - Package - - - - - - #
 
@@ -152,8 +152,6 @@
      neofetch
      firefox
      home-manager
-     gtk2
-     gtk3
      flameshot
      xorg.xrandr
      xorg.xsetroot
@@ -167,8 +165,9 @@
      pkgs.ly
      pkgs.fzf
      pkgs.nodejs_23
+     pkgs.zulu23
      pkgs.gcc
- #   pkgs.libreoffice
+     pkgs.libreoffice
      pkgs.dig
      pkgs.curl
    ];
