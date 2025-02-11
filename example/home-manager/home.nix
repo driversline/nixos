@@ -8,7 +8,7 @@
   home.pointerCursor =
     let
       getFrom = url: hash: name: {
-          gtk.enable = true;
+          gtk.enable = false;
           x11.enable = true;
           name = name;
           size = 18;
