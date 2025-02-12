@@ -1,6 +1,6 @@
-# Example [here](https://github.com/driversline/nixos/blob/main/example/home-manager/home.nix)
+# Пример [здесь](https://github.com/driversline/nixos/blob/main/example/home-manager/home.nix)
 
-# Command
+# Команда
 
 ```bash
 nix-prefetch-url "Ссылка"
@@ -14,10 +14,10 @@ path is '/nix/store/4syqlxpa5p6192gx2q9zimwvqx07pcwy-Nordzy-cursors-white.tar.gz
 ```
 
 ```bash
-Here 1i2ypkfaid5fh5dk3m2q2r0qc6az9a6l9psyin6n9djyymciknb2 - calculated hash
+Здесь 1i2ypkfaid5fh5dk3m2q2r0qc6az9a6l9psyin6n9djyymciknb2 - полученный хеш
 ```
 
-# Structure
+# Структура
 
 ```bash
 { config, pkgs, ... }:
@@ -56,7 +56,7 @@ Here 1i2ypkfaid5fh5dk3m2q2r0qc6az9a6l9psyin6n9djyymciknb2 - calculated hash
 }
 ```
 
-# Help
+# Помощь
 
 [Wiki](https://nixos.wiki/wiki/Cursor_Themes)
 
