@@ -56,12 +56,6 @@ Here 1i2ypkfaid5fh5dk3m2q2r0qc6az9a6l9psyin6n9djyymciknb2 - calculated hash
 }
 ```
 
-# Cursor Size
-
-```bash
-size = X
-```
-
 # Help
 
 [Wiki](https://nixos.wiki/wiki/Cursor_Themes)
