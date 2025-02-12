@@ -1,4 +1,4 @@
-# Don't forget about this command
+# Не забывайте
 ```bash
 home-manager switch
 ```
