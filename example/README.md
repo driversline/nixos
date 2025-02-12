@@ -1,5 +1,5 @@
 ## Ссылки на конфиги
-[nvim](https://github.com/driversline/bspwm/blob/main/dotfiles/nvim/init.lua) - [alacritty](https://github.com/driversline/bspwm/blob/main/dotfiles/alacritty.toml) - [fish](https://github.com/driversline/bspwm/blob/main/dotfiles/fish/config.fish) - [gtk3](https://github.com/driversline/docs/blob/main/gtk-3.0/settings.ini) - [bspwmrc](https://github.com/driversline/bspwm/blob/main/dotfiles/bspwmrc) - [sxhkdrc](https://github.com/driversline/bspwm/blob/main/dotfiles/sxhkdrc)
+[nvim](https://github.com/driversline/bspwm/blob/main/dotfiles/nvim/init.lua) - [alacritty](https://github.com/driversline/bspwm/blob/main/dotfiles/alacritty.toml) - [fish](https://github.com/driversline/bspwm/blob/main/dotfiles/fish/config.fish) - [bspwmrc](https://github.com/driversline/bspwm/blob/main/dotfiles/bspwmrc) - [sxhkdrc](https://github.com/driversline/bspwm/blob/main/dotfiles/sxhkdrc)
 
 ## Не забывайте
 ```bash
