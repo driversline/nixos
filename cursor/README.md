@@ -16,8 +16,8 @@ path is '/nix/store/4syqlxpa5p6192gx2q9zimwvqx07pcwy-Nordzy-cursors-white.tar.gz
 
 {
   home.stateVersion = "24.11";
-  home.username = "user";
-  home.homeDirectory = "/home/user";
+  home.username = "Ваш-Юзер";
+  home.homeDirectory = "/home/Ваш-Юзер";
 
   home.pointerCursor =
     let
@@ -37,7 +37,7 @@ path is '/nix/store/4syqlxpa5p6192gx2q9zimwvqx07pcwy-Nordzy-cursors-white.tar.gz
         };
     in
       getFrom
-        "https://github.com/driversline/bspwm/blob/main/dotfiles/cursors/Nordzy-cursors-white.tar.gz?raw=true"
+        "Ссылка-К-Курсору"
         "Хеш-Полученный-Через-nix-prefetch-url"
         "Название-Вашей-Темы";
 
