@@ -2,6 +2,12 @@
 
 # Example - [Here](https://github.com/driversline/nixos/blob/main/example/home-manager/home.nix)
 
+# Command
+
+```bash
+nix-prefetch-url "Ссылка"
+```
+
 ```bash
 [ /home ] ~> nix-prefetch-url "https://github.com/driversline/bspwm/blob/main/dotfiles/cursors/Nordzy-cursors-white.tar.gz?raw=true"
 path is '/nix/store/4syqlxpa5p6192gx2q9zimwvqx07pcwy-Nordzy-cursors-white.tar.gz?raw=true'
