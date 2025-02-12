@@ -30,5 +30,5 @@ environment.variables.LD_LIBRARY_PATH = "/nix/store/kynlrr98p2c235b00c72b14apn7l
 # Help
 
 ```bash
-Your can paste your path to libGL.so.1, all paths found by the command find (In Example) will work
+Your can paste your path to libGL.so.1, all paths found by the command `find` (In Example) will work
 ```
