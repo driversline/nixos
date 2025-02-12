@@ -1,6 +1,4 @@
-# Offical manual - [Wiki](https://nixos.wiki/wiki/Cursor_Themes)
-
-# Example - [Here](https://github.com/driversline/nixos/blob/main/example/home-manager/home.nix)
+# Example [here](https://github.com/driversline/nixos/blob/main/example/home-manager/home.nix)
 
 # Command
 
@@ -64,4 +62,7 @@ Here 1i2ypkfaid5fh5dk3m2q2r0qc6az9a6l9psyin6n9djyymciknb2 - calculated hash
 size = X
 ```
 
+# Help
+
+[Wiki](https://nixos.wiki/wiki/Cursor_Themes)
 
