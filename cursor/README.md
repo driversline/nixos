@@ -1,6 +1,6 @@
 # Offical manual - [Wiki](https://nixos.wiki/wiki/Cursor_Themes)
 
-# Example - [Here](https://github.com/driversline/nixos/blob/main/example/home-manager/home.nix) - Or
+# Example - [Here](https://github.com/driversline/nixos/blob/main/example/home-manager/home.nix)
 
 ```bash
 [ /home ] ~> nix-prefetch-url "https://github.com/driversline/bspwm/blob/main/dotfiles/cursors/Nordzy-cursors-white.tar.gz?raw=true"
