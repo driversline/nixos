@@ -1,5 +1,14 @@
 # Offical manual - [Wiki](https://nixos.wiki/wiki/Cursor_Themes)
 
+# Example - [Here](https://github.com/driversline/nixos/blob/main/example/home-manager/home.nix) - Or
+
+```bash
+[ /home ] ~> nix-prefetch-url "https://github.com/driversline/bspwm/blob/main/dotfiles/cursors/Nordzy-cursors-white.tar.gz?raw=true"
+path is '/nix/store/4syqlxpa5p6192gx2q9zimwvqx07pcwy-Nordzy-cursors-white.tar.gz?raw=true'
+1i2ypkfaid5fh5dk3m2q2r0qc6az9a6l9psyin6n9djyymciknb2
+[ /home ] ~>
+```
+
 # Structure
 
 ```bash
@@ -43,15 +52,6 @@
 
 ```bash
 size = X
-```
-
-# Example - [Here](https://github.com/driversline/nixos/blob/main/example/home-manager/home.nix) - Or
-
-```bash
-[ /home ] ~> nix-prefetch-url "https://github.com/driversline/bspwm/blob/main/dotfiles/cursors/Nordzy-cursors-white.tar.gz?raw=true"
-path is '/nix/store/4syqlxpa5p6192gx2q9zimwvqx07pcwy-Nordzy-cursors-white.tar.gz?raw=true'
-1i2ypkfaid5fh5dk3m2q2r0qc6az9a6l9psyin6n9djyymciknb2
-[ /home ] ~>
 ```
 
 
