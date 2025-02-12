@@ -39,6 +39,21 @@
   services.journald = {
    extraConfig = ''
     Storage=none
+    ForwardToSyslog=no
+    ForwardToKMsg=no
+    ForwardToConsole=no
+    MaxRetentionSec=1s
+    MaxFileSec=1s
+    RateLimitInterval=0
+    RateLimitBurst=0
+    SystemMaxUse=0
+    RuntimeMaxUse=0
+    SystemKeepFree=0
+    RuntimeKeepFree=0
+    SystemMaxFileSize=0
+    RuntimeMaxFileSize=0
+    SystemMaxFiles=0
+    RuntimeMaxFiles=0
    '';
   };
 
@@ -57,7 +72,7 @@
 
 # - - - - - - Build - - - - - - #
 
-  boot.loader.systemd-boot.configurationLimit = 1;
+  boot.loader.systemd-boot.configurationLimit = 5;
 
 # - - - - - - Kernel - - - - - - #
 
@@ -138,7 +153,7 @@
 
 # - - - - - - Theme - - - - - - #
 
-  qt.enable = true;
+  qt.enable = false;
 
 # - - - - - - Package - - - - - - #
 
@@ -170,6 +185,9 @@
      pkgs.libreoffice
      pkgs.dig
      pkgs.curl
+     pkgs.evtest
+     pkgs.gnumake
+     pkgs.cmake
    ];
 
 # - - - - - - Fonts - - - - - - #
@@ -181,6 +199,12 @@
 # - - - - - - Service - - - - - - #
 
    systemd.services."*".serviceConfig.TimeoutStopSec = "1s";
+
+   systemd.services.systemd-timesyncd.enable = false;
+
+   systemd.services.systemd-oomd.enable = false;
+
+   services.logrotate.enable = false;
 
 # - - - - - - System - - - - - - #
 
