@@ -1,6 +1,6 @@
 # Пример [здесь](https://github.com/driversline/nixos/blob/main/example/home-manager/home.nix)
 
-# Команда
+# Получение хеша
 
 ```bash
 nix-prefetch-url "Ссылка"
