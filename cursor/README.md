@@ -9,6 +9,10 @@ path is '/nix/store/4syqlxpa5p6192gx2q9zimwvqx07pcwy-Nordzy-cursors-white.tar.gz
 [ /home ] ~>
 ```
 
+```bash
+Here 1i2ypkfaid5fh5dk3m2q2r0qc6az9a6l9psyin6n9djyymciknb2 - calculated hash
+```
+
 # Structure
 
 ```bash
