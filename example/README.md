@@ -1,16 +1,16 @@
-## Program links
+## Ссылки на конфиги
 [nvim](https://github.com/driversline/bspwm/blob/main/dotfiles/nvim/init.lua) - [alacritty](https://github.com/driversline/bspwm/blob/main/dotfiles/alacritty.toml) - [fish](https://github.com/driversline/bspwm/blob/main/dotfiles/fish/config.fish) - [gtk3](https://github.com/driversline/docs/blob/main/gtk-3.0/settings.ini) - [bspwmrc](https://github.com/driversline/bspwm/blob/main/dotfiles/bspwmrc) - [sxhkdrc](https://github.com/driversline/bspwm/blob/main/dotfiles/sxhkdrc)
 
-## Don't forget to run
+## Не забывайте
 ```bash
 chmod +x ~/.config/bspwm/bspwmrc
 ```
 
-## Copy
+## Скопировать конфиги
 
 <details>
 
-<summary>Show command</summary>
+<summary>Показать команду</summary>
 
 ```bash
 curl -O https://github.com/driversline/docs/blob/main/gtk-3.0/settings.ini \
@@ -23,7 +23,7 @@ curl -O https://github.com/driversline/docs/blob/main/gtk-3.0/settings.ini \
     
 </details>
 
-## Description
+## Описание
 ```bash
-This configuration is intended for use with NVIDIA graphics (without integrated Intel graphics). Systemd-boot logs are completely hidden. Available locales are Russian/English. Swap is disabled. It uses the Zen kernel with minimal auditing. The default user is set to "user".
+Эта конфигурация предназначена для использования с графикой NVIDIA (без интегрированной графики Intel). Логи systemd-boot полностью скрыты. Доступные локали - русский/английский. Swap отключен. Используется ядро Zen с минимальным аудитом. Пользователь по умолчанию установлен как "user".
 ```
