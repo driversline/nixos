@@ -43,10 +43,10 @@ Here 1i2ypkfaid5fh5dk3m2q2r0qc6az9a6l9psyin6n9djyymciknb2 - calculated hash
       getFrom
         "https://-Ссылка-К-Курсору"
         "Хеш-Полученный-Через-nix-prefetch-url"
-        "Название-Вашей-Темы";
+        "Название-Вашего-Курсора";
 
   home.sessionVariables = {
-   XCURSOR_THEME = "Название-Вашей-Темы";
+   XCURSOR_THEME = "Название-Вашего-Курсора";
   };
 
 }
