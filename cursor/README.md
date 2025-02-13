@@ -1,4 +1,4 @@
-# Пример [здесь](https://github.com/driversline/cursors/blob/main/README.md)
+
 
 # Получение хеша
 
