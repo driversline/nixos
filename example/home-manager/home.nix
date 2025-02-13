@@ -17,13 +17,13 @@
               mkdir -p $out/share/icons
               ln -s ${pkgs.fetchzip {
                 url = url;
-                sha256 = "7yY1yDUzNg+SJynv7WFdAYApOFGFc7T3DT1C/auGORQ=";
+                sha256 = hash;
               }} $out/share/icons/${name}
           '';
         };
     in
       getFrom
-        "https://github.com/driversline/bspwm/blob/main/dotfiles/cursors/Nordzy-cursors-white.tar.gz?raw=true"
+        "https://github.com/driversline/cursors/blob/main/Nordzy-cursors.tar.gz?raw=true"
         "7yY1yDUzNg+SJynv7WFdAYApOFGFc7T3DT1C/auGORQ="
         "Nordzy-cursors-white";
 
