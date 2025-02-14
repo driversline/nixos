@@ -4,10 +4,6 @@
   imports =
     [
       ./hardware-configuration.nix
-      ./network.nix
-      ./nvidia.nix
-      ./locale.nix
-      ./bspwm.nix
     ];
 
 # - - - - - - Boot - - - - - - #
