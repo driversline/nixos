@@ -3,6 +3,10 @@
 {
   imports =
     [
+      ./network.nix
+      ./nvidia.nix
+      ./locale.nix
+      ./bspwm.nix
       ./hardware-configuration.nix
     ];
 
