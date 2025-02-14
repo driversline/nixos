@@ -1,7 +1,11 @@
 { config, pkgs, ... }:
 
 {
-  services.sxhkd.config = ''
+  home.packages = [
+    pkgs.sxhkd
+  ];
+
+  home.file."config/sxhkd/sxhkdrc".text = ''
     super + w
       alacritty
     super + q
