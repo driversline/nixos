@@ -1,7 +1,12 @@
 { config, pkgs, ... }:
 
 {
-  services.alacritty.config = ''
+
+  home.packages = [
+    pkgs.alacritty
+  ];
+
+  home.file."config/alacritty/alacritty.toml".text = ''
     [[keyboard.bindings]]
     action = "Copy"
     key = "C"
@@ -26,4 +31,5 @@
     [colors.primary]
     background = '0x000000'
   '';
+
 }
