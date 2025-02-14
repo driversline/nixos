@@ -34,7 +34,7 @@ services.bspwm.config = ''
   xset -dpms
   xset s off
   xsetroot -cursor_name left_ptr
-  sxhkd -c $HOME/.config/bspwm/sxhkdrc &
+  sxhkd &
   bspc rule -r \*
   bspc rule -a \* state=floating, rectangle=1200x600+360+240
   bspc rule -a Alacritty state=floating, rectangle=800x295+560+390
