@@ -10,6 +10,7 @@
       nix = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
+          ./hardware-configuration.nix
           ./sxhkd.nix
           ./nvidia.nix
           ./network.nix
