@@ -9,6 +9,15 @@
       ./locale.nix
     ];
 
+  nix = {
+    package = pkgs.nixVersions.stable;
+    extraOptions = ''
+      experimental-features = nix-command flakes
+    '';
+  };
+
+  environment.variables.LD_LIBRARY_PATH = "/nix/store/kynlrr98p2c235b00c72b14apn7l8l4y-libglvnd-1.7.0/lib";
+
 # - - - - - - Boot - - - - - - #
 
   boot.loader.systemd-boot.enable = true;
@@ -36,12 +45,14 @@
 
 # - - - - - - Journald - - - - - -#
 
-  services.journald = {
-   extraConfig = ''
+  systemd.services.journald.enable = true;
+  services.journald.extraConfig = ''
+    [Journal]
     Storage=none
     ForwardToSyslog=no
     ForwardToKMsg=no
     ForwardToConsole=no
+    ForwardToWall=no
     MaxRetentionSec=1s
     MaxFileSec=1s
     RateLimitInterval=0
@@ -54,8 +65,7 @@
     RuntimeMaxFileSize=0
     SystemMaxFiles=0
     RuntimeMaxFiles=0
-   '';
-  };
+  '';
 
 # - - - - - - Swap - - - - - - #
 
@@ -96,7 +106,7 @@
 
 # - - - - - - Docker - - - - - - #
 
-#   virtualisation.docker.enable = true;
+#  virtualisation.docker.enable = true;
 
 # - - - - - - Shell - - - - - - #
 
@@ -129,10 +139,9 @@
 
 # - - - - - - Sound - - - - - - #
 
-  # services.pipewire = {
-  #   enable = true;
-  #   pulse.enable = true;
-  # };
+  services.pipewire.enable = true;
+
+  services.pipewire.wireplumber.enable = true;
 
 # - - - - - - Users - - - - - - #
 
@@ -153,7 +162,7 @@
 
 # - - - - - - Theme - - - - - - #
 
-  qt.enable = false;
+   qt.enable = true;
 
 # - - - - - - Package - - - - - - #
 
@@ -188,6 +197,13 @@
      pkgs.evtest
      pkgs.gnumake
      pkgs.cmake
+     pkgs.libsForQt5.qt5.qtbase
+     pkgs.libsForQt5.qt5.qtwebengine
+     pkgs.vimPlugins.vim-plug
+     pkgs.nginx
+     pkgs.libGL
+     pkgs.zulu17
+     pkgs.minecraft
    ];
 
 # - - - - - - Fonts - - - - - - #
@@ -205,6 +221,25 @@
    systemd.services.systemd-oomd.enable = false;
 
    services.logrotate.enable = false;
+
+   systemd.services."sleep.target".enable = false;
+
+   systemd.services."hybrid-sleep.target".enable = false;
+
+   systemd.services."systemd-hybrid-sleep.service".enable = false;
+
+   systemd.services."pre-sleep.service".enable = false;
+
+   systemd.services.acpid.enable = false;
+
+   services.logind.extraConfig = ''
+    HandleLidSwitch=ignore
+    HandleSuspendKey=ignore
+    HandleHibernateKey=ignore
+    HandlePowerKey=ignore
+    HandleLidSwitchExternalPower=ignore
+    HandleLidSwitchDocked=ignore
+   '';
 
 # - - - - - - System - - - - - - #
 
