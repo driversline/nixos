@@ -22,30 +22,46 @@
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = false;
-  services.xserver.displayManager.lightdm.enable = false;
-  services.displayManager.ly.enable = true;
   boot.consoleLogLevel = 0;
-  systemd.extraConfig = ''
+  boot.kernelModules = [ ];
+  boot.supportedFilesystems = [ "vfat" "ext4" ];
+  boot.blacklistedKernelModules = [ ];
+
+# - - - - - - Systemd - - - - - -#
+
+  systemd = {
+  extraConfig = ''
     [Manager]
     LogLevel=emerg
     LogTarget=null
   '';
 
-  systemd.services = {
-   "default" = {
-    wantedBy = ["multi-user.target"];
-   };
+  services = {
+    "default" = {
+      wantedBy = ["multi-user.target"];
+    };
+
+  swap = {
+    enable = false;
   };
 
-  boot.kernelModules = [ ];
+    "*".serviceConfig.TimeoutStopSec = "1s";
 
-  boot.supportedFilesystems = [ "vfat" "ext4" ];
+    systemd-timesyncd.enable = false;
+    "time-sync.target".enable = false;
+    "time-set.target".enable = false;
+    systemd-oomd.enable = false;
+    "default.service".enable = false;
+    "sleep.target".enable = false;
+    "hybrid-sleep.target".enable = false;
+    "systemd-hybrid-sleep.service".enable = false;
+    "pre-sleep.service".enable = false;
+    journald.enable = true;
+    acpid.enable = false;
 
-  boot.blacklistedKernelModules = [ ];
+    };
+  };
 
-# - - - - - - Journald - - - - - -#
-
-  systemd.services.journald.enable = true;
   services.journald.extraConfig = ''
     [Journal]
     Storage=none
@@ -71,10 +87,6 @@
 
   swapDevices = [];
 
-  systemd.services.swap = {
-    enable = false;
-  };
-
 # - - - - - - Cache - - - - - - #
 
   nix.settings.substituters = [ "https://cache.nixos.org/" ];
@@ -87,7 +99,6 @@
 # - - - - - - Kernel - - - - - - #
 
   boot.kernelPackages = pkgs.linuxPackages_zen;
-
   boot.kernelParams = [
     "quiet"
     "loglevel=0"
@@ -106,7 +117,7 @@
 
 # - - - - - - Docker - - - - - - #
 
-#  virtualisation.docker.enable = true;
+# virtualisation.docker.enable = true;
 
 # - - - - - - Shell - - - - - - #
 
@@ -117,19 +128,6 @@
 
    programs.command-not-found.enable = false;
 
-# - - - - - - x11 / bspwm - - - - - - #
-
-   services.xserver.enable = true;
-   services.xserver.windowManager.bspwm.enable = true;
-   services.displayManager.defaultSession = "none+bspwm";
-
-   services.xserver.displayManager.sessionCommands = ''
-
-   feh --bg-scale $HOME/bspwm/wallpapers/*.png &
-   xrandr --output HDMI-0 --mode 1920x1080 --rate 144
-
-   '';
-
 # - - - - - - Config - - - - - - #
 
    nixpkgs.config = {
@@ -137,28 +135,20 @@
     allowBroken = true;
    };
 
-# - - - - - - Sound - - - - - - #
-
-  services.pipewire.enable = true;
-
-  services.pipewire.wireplumber.enable = true;
-
 # - - - - - - Users - - - - - - #
 
    users.users.user = {
      isNormalUser = true;
      home = "/home/user";
      extraGroups = [ "wheel" ];
-  #  packages = with pkgs; [
-  #
-  #   ];
    };
 
-   security.sudo.enable = true;
-
-   security.sudo.configFile = ''
-    Defaults !authenticate
-  '';
+   security.sudo = {
+    enable = true;
+    configFile = ''
+      Defaults !authenticate
+    '';
+   };
 
 # - - - - - - Theme - - - - - - #
 
@@ -203,6 +193,7 @@
      pkgs.nginx
      pkgs.libGL
      pkgs.zulu17
+     pkgs.spotify
      pkgs.minecraft
    ];
 
@@ -214,40 +205,36 @@
 
 # - - - - - - Service - - - - - - #
 
-   systemd.services."*".serviceConfig.TimeoutStopSec = "1s";
+   services = {
+     xserver.displayManager.lightdm.enable = false;
+     displayManager.ly.enable = true;
+     xserver.enable = true;
+     xserver.windowManager.bspwm.enable = true;
+     displayManager.defaultSession = "none+bspwm";
+     pipewire.enable = true;
+     pipewire.wireplumber.enable = true;
+     logrotate.enable = false;
 
-   systemd.services.systemd-timesyncd.enable = false;
+     xserver.displayManager.sessionCommands = ''
+       feh --bg-scale $HOME/bspwm/wallpapers/*.png &
+       xrandr --output HDMI-0 --mode 1920x1080 --rate 144
+     '';
 
-   systemd.services.systemd-oomd.enable = false;
-
-   services.logrotate.enable = false;
-
-   systemd.services."sleep.target".enable = false;
-
-   systemd.services."hybrid-sleep.target".enable = false;
-
-   systemd.services."systemd-hybrid-sleep.service".enable = false;
-
-   systemd.services."pre-sleep.service".enable = false;
-
-   systemd.services.acpid.enable = false;
-
-   services.logind.extraConfig = ''
-    HandleLidSwitch=ignore
-    HandleSuspendKey=ignore
-    HandleHibernateKey=ignore
-    HandlePowerKey=ignore
-    HandleLidSwitchExternalPower=ignore
-    HandleLidSwitchDocked=ignore
-   '';
+     logind.extraConfig = ''
+       HandleLidSwitch=ignore
+       HandleSuspendKey=ignore
+       HandleHibernateKey=ignore
+       HandlePowerKey=ignore
+       HandleLidSwitchExternalPower=ignore
+       HandleLidSwitchDocked=ignore
+     '';
+   };
 
 # - - - - - - System - - - - - - #
 
-   system.autoUpgrade.enable = false;
-
-   system.autoUpgrade.allowReboot = false;
-
    system = {
+    autoUpgrade.enable = false;
+    autoUpgrade.allowReboot = false;
     stateVersion = "24.11";
    };
 
