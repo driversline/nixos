@@ -1,1 +1,1 @@
-[README](https://github.com/driversline/docs/tree/main/minecraft/nixos)
+[Русский](https://github.com/driversline/docs/blob/main/minecraft/nixos/Russian.md) - [English](https://github.com/driversline/docs/blob/main/minecraft/nixos/English.md)
