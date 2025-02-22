@@ -1,6 +1,11 @@
 { config, lib, pkgs, ... }:
 
 {
+
+#  disabledModules = [
+#    "/nix/var/nix/profiles/per-user/root/channels/nixos/nixos/modules/programs/regreet.nix"
+#  ];
+
   imports =
     [
       ./hardware-configuration.nix
@@ -9,6 +14,8 @@
       ./locale.nix
     ];
 
+  programs.dconf.enable = false;
+
   nix = {
     package = pkgs.nixVersions.stable;
     extraOptions = ''
@@ -16,7 +23,7 @@
     '';
   };
 
-  environment.variables.LD_LIBRARY_PATH = "/nix/store/kynlrr98p2c235b00c72b14apn7l8l4y-libglvnd-1.7.0/lib";
+# environment.variables.LD_LIBRARY_PATH = "/nix/store/kynlrr98p2c235b00c72b14apn7l8l4y-libglvnd-1.7.0/lib";
 
 # - - - - - - Boot - - - - - - #
 
@@ -85,7 +92,7 @@
 
 # - - - - - - Swap - - - - - - #
 
-  swapDevices = [];
+  swapDevices = [ ];
 
 # - - - - - - Cache - - - - - - #
 
@@ -159,6 +166,7 @@
    environment.systemPackages = with pkgs; [
      neovim
      alacritty
+     kitty
      bspwm
      git
      sxhkd
@@ -181,14 +189,14 @@
      pkgs.nodejs_23
      pkgs.zulu23
      pkgs.gcc
-     pkgs.libreoffice
+ #   pkgs.libreoffice
      pkgs.dig
      pkgs.curl
      pkgs.evtest
      pkgs.gnumake
      pkgs.cmake
-     pkgs.libsForQt5.qt5.qtbase
-     pkgs.libsForQt5.qt5.qtwebengine
+ #   pkgs.libsForQt5.qt5.qtbase
+ #   pkgs.libsForQt5.qt5.qtwebengine
      pkgs.vimPlugins.vim-plug
      pkgs.nginx
      pkgs.libGL
