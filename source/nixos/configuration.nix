@@ -9,12 +9,10 @@
   imports =
     [
       ./hardware-configuration.nix
-      ./network.nix
-      ./nvidia.nix
-      ./locale.nix
+      ./other/network.nix
+      ./other/nvidia.nix
+      ./other/locale.nix
     ];
-
-  programs.dconf.enable = false;
 
   nix = {
     package = pkgs.nixVersions.stable;
@@ -132,6 +130,8 @@
 # - - - - - - Disable - - - - - - #
 
    programs.command-not-found.enable = false;
+
+   programs.dconf.enable = false;
 
 # - - - - - - Config - - - - - - #
 
