@@ -23,8 +23,6 @@
     '';
   };
 
-# environment.variables.LD_LIBRARY_PATH = "/nix/store/kynlrr98p2c235b00c72b14apn7l8l4y-libglvnd-1.7.0/lib";
-
 # - - - - - - Boot - - - - - - #
 
   boot.loader.systemd-boot.enable = true;
@@ -199,10 +197,7 @@
  #   pkgs.libsForQt5.qt5.qtwebengine
      pkgs.vimPlugins.vim-plug
      pkgs.nginx
-     pkgs.libGL
-     pkgs.zulu17
      pkgs.spotify
-     pkgs.minecraft
    ];
 
 # - - - - - - Fonts - - - - - - #
