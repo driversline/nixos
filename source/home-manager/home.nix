@@ -3,7 +3,7 @@
 {
 
 # imports = [
-#   (import ./apps/minecraft)
+#   (import ./apps/minecraft.nix)
 # ];
 
   home.stateVersion = "24.11";
