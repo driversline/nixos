@@ -2,9 +2,9 @@
 
 {
 
-  imports = [
-    (import ./apps/minecraft)
-  ];
+#  imports = [
+#   (import ./apps/minecraft)
+#  ];
 
   home.stateVersion = "24.11";
   home.username = "user";
